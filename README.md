@@ -14,13 +14,13 @@ Prosty program typu RAG (*Retrieval-Augmented Generation*), który wczytuje teks
 - Zainstalowana i uruchomiona aplikacja [Ollama](https://ollama.com/)
 - Modele Ollama:
   - `nomic-embed-text` – tworzenie embeddingów,
-  - `phi3` – generowanie odpowiedzi.
+  - `Bielik` – generowanie odpowiedzi.
 
 Pobierz wymagane modele:
 
 ```bash
 ollama pull nomic-embed-text
-ollama pull phi3
+ollama pull SpeakLeash/bielik-minitron-7B-v3.0-instruct:Q4_K_M
 ```
 
 Zainstaluj biblioteki Pythona:
@@ -49,7 +49,7 @@ python3 main.py
 
 Domyślnie program przetwarza plik `input/sprawozdanie_fizyka.pdf` i zadaje pytanie:
 
-> Jaki jest wzór na moc wiatru?
+> Stresć mi pierwszy rozdział dokumentu i podaj główne wnioski
 
 Ścieżkę do dokumentu oraz treść pytania można zmienić w pliku `main.py`.
 
@@ -73,7 +73,7 @@ Funkcja `query_rag()` tworzy embedding pytania przy użyciu tego samego modelu. 
 
 ### 5. Wygenerowanie odpowiedzi
 
-Znalezione fragmenty są łączone w kontekst i dołączane do promptu. Model `phi3` otrzymuje polecenie, aby odpowiedzieć na pytanie na podstawie tego kontekstu, a w przypadku braku informacji wprost przyznać, że jej nie zna. Odpowiedź jest wypisywana strumieniowo w terminalu.
+Znalezione fragmenty są łączone w kontekst i dołączane do promptu. Model `bielik` otrzymuje polecenie, aby odpowiedzieć na pytanie na podstawie tego kontekstu, a w przypadku braku informacji wprost przyznać, że jej nie zna. Odpowiedź jest wypisywana strumieniowo w terminalu.
 
 ## Ważne informacje
 
