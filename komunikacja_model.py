@@ -69,7 +69,7 @@ Odpowiedź:"""
 
     # 4. Generowanie odpowiedzi
     stream = ollama.chat(
-        model="phi3",
+        model="SpeakLeash/bielik-minitron-7B-v3.0-instruct:Q4_K_M",
         messages=[{"role": "user", "content": prompt}],
         stream=True,
     )

@@ -5,6 +5,6 @@ if __name__ == "__main__":
     print("Indeksowanie dokumentu...")
     db_collection = setup_vector_db(pdf_file)
 
-    pytanie = "Jaki jest wzór na moc wiatru?"
+    pytanie = "Stresć mi pierwszy rozdział dokumentu i podaj główne wnioski."
     print(f"\nPytanie: {pytanie}\nOdpowiedź:")
     query_rag(db_collection, pytanie)
