@@ -1,4 +1,4 @@
-from komunikacja_model import query_rag, setup_vector_db
+from dialog_llm import query_rag, setup_vector_db
 
 if __name__ == "__main__":
     pdf_file = "input/sprawozdanie_fizyka.pdf"  # Podaj ścieżkę do swojego PDF-a
